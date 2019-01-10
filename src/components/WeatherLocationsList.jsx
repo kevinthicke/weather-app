@@ -3,9 +3,14 @@ import { connect } from 'react-redux';
 import WeatherLocation from './WeatherLocation';
 
 const WeatherLocationsList = ({ aWeatherLocationProps }) => {
+    const handleSelectedLocation = (city) => console.log('He recibido el click desde WeatherLocationList!' + city)
+
     return (
         <div>
-            { aWeatherLocationProps.map(data => <WeatherLocation key={data.city} forecast={data}/>) }
+            { aWeatherLocationProps.map(
+                (data,index) => <WeatherLocation key={index} 
+                                                 forecast={data}
+                                                 onSelectedLocation={(city) => handleSelectedLocation(city)}/>) }
         </div>
     )
 };
