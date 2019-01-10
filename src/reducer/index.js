@@ -5,7 +5,7 @@ export default function reducer (state, action) {
         case LOAD_WEATHER: 
             return ({
                 ...state,
-                weather: action.weather
+                data: action.data
             });
         default: 
             return state;

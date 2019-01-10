@@ -16,7 +16,7 @@ export default class App extends Component {
         </Row>
         <Row>
           <Col xs={12} md={5}>
-            <WeatherLocationsList aCities={aCities}/>
+            <WeatherLocation/>  
           </Col>
           <Col xs={12} md={7}>
             <ForecastExtended/>

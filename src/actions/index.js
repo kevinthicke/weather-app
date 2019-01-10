@@ -9,7 +9,12 @@ Most popular middleware that will let us return a function from your action crea
 
 const loadWeather = city => {
     return dispatch => getWeather(city).then(limitedData => {
-        dispatch({ type: LOAD_WEATHER, weather: limitedData })
+        dispatch({ 
+            type: LOAD_WEATHER, 
+            data: { 
+                city, 
+                weather: limitedData } 
+        })
     });
 }
 

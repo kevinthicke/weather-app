@@ -3,11 +3,14 @@ import thunk from 'redux-thunk';
 import reducer from '../reducer';
 
 const initialState = {
-    weather: {} 
+    data: {
+        city: null,
+        weather: {}
+    }
 }
 
 export const store = createStore(
     reducer, 
     initialState, 
     applyMiddleware(thunk)
-);
+    );
