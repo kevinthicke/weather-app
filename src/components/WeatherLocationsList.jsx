@@ -1,12 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import WeatherLocation from './WeatherLocation';
 
-const WeatherLocationsList = ({ aCities }) => {
+const WeatherLocationsList = ({ aWeatherLocationProps }) => {
     return (
         <div>
-            { aCities.map(city => <WeatherLocation key={city} city={city}/>) }
+            { aWeatherLocationProps.map(data => <WeatherLocation key={data.city} forecast={data}/>) }
         </div>
     )
 };
 
-export default WeatherLocationsList;
+
+const mapStateToProps = state => ({
+    aWeatherLocationProps: state.data
+})
+
+export default connect(mapStateToProps, null)(WeatherLocationsList)

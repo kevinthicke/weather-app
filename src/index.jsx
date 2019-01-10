@@ -5,7 +5,11 @@ import { store } from './store';
 import App from './App';
 import { loadWeather } from './actions';
 
-store.dispatch(loadWeather('london'));
+const aCities = ["London", "Bogota", "Cali", "Barcelona"];
+
+aCities.forEach(city => {
+    store.dispatch(loadWeather(city))
+});
 
 ReactDOM.render(
     <Provider store={store}>

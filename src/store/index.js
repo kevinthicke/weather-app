@@ -3,10 +3,7 @@ import thunk from 'redux-thunk';
 import reducer from '../reducer';
 
 const initialState = {
-    data: {
-        city: null,
-        weather: {}
-    }
+    data: []
 }
 
 export const store = createStore(

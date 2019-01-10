@@ -5,8 +5,6 @@ import WeatherLocation from './components/WeatherLocation';
 import ForecastExtended from './components/ForecastExtended';
 import WeatherLocationsList from './components/WeatherLocationsList';
 
-const aCities = ["London", "Bogota", "Cali", "Barcelona"];
-
 export default class App extends Component {
   render() {
     return (
@@ -16,7 +14,7 @@ export default class App extends Component {
         </Row>
         <Row>
           <Col xs={12} md={5}>
-            <WeatherLocation/>  
+            <WeatherLocationsList/>  
           </Col>
           <Col xs={12} md={7}>
             <ForecastExtended/>
