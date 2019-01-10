@@ -1,5 +1,4 @@
-# Plantilla de React con Webpack
+# Weather App
 
-Plantilla de React con las dependencias y la configuración de Webpack y Babel necesarias para:
-- Crear métodos en clases componentes (`babel-plugin-transform-class-properties`).
-- Importar archivos .css en código js 
+Se desarrolla una aplicación sobre la previsión meteorológica haciendo uso las bibliotecas ReactJS y Redux. Los datos meteorológicos se obtienen de la API de OpenWeatherMap. Para los estilos se utiliza React-Bootstrap y Material-UI.
+

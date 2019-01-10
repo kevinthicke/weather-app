@@ -1,7 +1,7 @@
 {
-  "name": "React-Template",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "A simple webpack react template",
+  "description": "A simple react-redux app",
   "main": "index.js",
   "scripts": {
     "build": "webpack",

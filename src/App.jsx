@@ -5,7 +5,7 @@ import WeatherLocation from './components/WeatherLocation';
 import ForecastExtended from './components/ForecastExtended';
 import WeatherLocationsList from './components/WeatherLocationsList';
 
-const aCities = [ "London", "Bogota", "Cali" ];
+const aCities = [ "London", "Bogota", "Cali", "Barcelona" ];
 
 export default class App extends Component {
   render() {
