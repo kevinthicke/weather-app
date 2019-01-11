@@ -1,4 +1,4 @@
-import { LOAD_WEATHER } from "../actions/types";
+import { LOAD_WEATHER, LOAD_EXTENDED_FORECAST } from "../actions/types";
 
 export default function reducer (state, action) {
     switch (action.type) {
@@ -7,7 +7,7 @@ export default function reducer (state, action) {
                 ...state,
                 data: state.data.concat(action.data)
             });
-        case 'LOAD_EXTENDED_FORECAST':
+        case LOAD_EXTENDED_FORECAST:
             return({
                 ...state,
                 forecast: action.forecast

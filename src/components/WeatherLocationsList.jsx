@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import WeatherLocation from './WeatherLocation';
 import { loadExtendedForecast } from '../actions';
 
-const WeatherLocationsList = ({ aWeatherLocationProps, forecast, handleSelectedLocation }) => {
+const WeatherLocationsList = ({ aWeatherLocationProps, handleSelectedLocation }) => {
     return (
         <div>
             { aWeatherLocationProps.map(
