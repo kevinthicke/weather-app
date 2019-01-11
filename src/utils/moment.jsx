@@ -10,8 +10,4 @@ export default function filterForecastByHour (forecast) {
         moment.unix(data.dt).hour() === afternoon);
 }
 
-const unixTimeToString = (unixTime) => moment.unix(unixTime).format("MMMM Do YYYY, h:mm:ss a");
-
-export {
-    unixTimeToString
-}
+export const unixTimeToString = (unixTime) => moment.unix(unixTime).format("MMMM Do YYYY, h:mm:ss a");

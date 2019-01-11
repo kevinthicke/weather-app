@@ -4,16 +4,11 @@ import WeatherLocation from './WeatherLocation';
 import { loadExtendedForecast } from '../actions';
 
 const WeatherLocationsList = ({ aWeatherLocationProps, handleSelectedLocation }) => {
-    return (
-        <div>
-            { aWeatherLocationProps.map(
+    return aWeatherLocationProps.map(
                 (data,index) => <WeatherLocation key={index} 
                                                  forecast={data}
-                                                 onSelectedLocation={(city) => handleSelectedLocation(city)}/>) }
-        </div>
-    )
+                                                 onSelectedLocation={(city) => handleSelectedLocation(city)}/>) 
 };
-
 
 const mapStateToProps = state => ({
     aWeatherLocationProps: state.data

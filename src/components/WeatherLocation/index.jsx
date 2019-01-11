@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import * as styles from './styles.css';
 import Location from './WeatherInfo/Location';
 import Temperature from './WeatherInfo/Temperature';
@@ -6,6 +6,7 @@ import ExtraInfo from './WeatherInfo/ExtraInfo';
 
 const WeatherLocation = ({ forecast: { city, weather }, onSelectedLocation }) => {
     const { temperature, pressure, humidity, weatherId } = weather;
+
     const handleInfoClick = () => onSelectedLocation(city)
 
     return (

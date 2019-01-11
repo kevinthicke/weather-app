@@ -1,5 +1,5 @@
 import { urlForecast } from './url';
-import filterForecastByHour from './moment';
+import filterForecastByHour, { unixTimeToString } from './moment';
 
 
 const limitForecast = data => {
@@ -25,7 +25,9 @@ const limitForecast = data => {
             }]
         } = element;
 
-        return({ unixTime, humidity, pressure, temperature, weatherId });
+        const dateTime = unixTimeToString(unixTime);
+
+        return({ dateTime, humidity, pressure, temperature, weatherId });
     });
 }
 

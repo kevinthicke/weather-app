@@ -36,12 +36,12 @@ const loadWeather = dummyparameter => dispatch => {
         })
 }
 
-const loadExtendedForecast = city => dispatch => {
-        return getForecast(city).then(forecast => dispatch({
-            type: LOAD_EXTENDED_FORECAST,
-            forecast
-        }));        
-}
+const loadExtendedForecast = city => dispatch => getForecast(city).then(
+    forecast => dispatch({
+        type: LOAD_EXTENDED_FORECAST,
+        forecast
+    })
+);
 
 
 export { loadWeather, loadExtendedForecast }
