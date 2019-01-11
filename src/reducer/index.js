@@ -7,6 +7,11 @@ export default function reducer (state, action) {
                 ...state,
                 data: state.data.concat(action.data)
             });
+        case 'LOAD_EXTENDED_FORECAST':
+            return({
+                ...state,
+                forecast: action.forecast
+            });
         default: 
             return state;
     }

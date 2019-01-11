@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import WeatherLocation from './WeatherLocation';
+import { loadExtendedForecast } from '../actions';
 
-const WeatherLocationsList = ({ aWeatherLocationProps }) => {
-    const handleSelectedLocation = (city) => console.log('He recibido el click desde WeatherLocationList!' + city)
-
+const WeatherLocationsList = ({ aWeatherLocationProps, forecast, handleSelectedLocation }) => {
     return (
         <div>
             { aWeatherLocationProps.map(
@@ -20,4 +19,8 @@ const mapStateToProps = state => ({
     aWeatherLocationProps: state.data
 })
 
-export default connect(mapStateToProps, null)(WeatherLocationsList)
+const mapDispatchToProps = dispatch => ({
+    handleSelectedLocation: city => dispatch(loadExtendedForecast(city))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(WeatherLocationsList)

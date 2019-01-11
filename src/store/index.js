@@ -3,7 +3,8 @@ import thunk from 'redux-thunk';
 import reducer from '../reducer';
 
 const initialState = {
-    data: []
+    data: [],
+    forecast: {}
 }
 
 export const store = createStore(
