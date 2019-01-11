@@ -4,7 +4,7 @@ import reducer from '../reducer';
 
 const initialState = {
     data: [],
-    forecast: {}
+    forecast: []
 }
 
 export const store = createStore(
