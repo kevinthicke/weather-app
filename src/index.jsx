@@ -5,7 +5,7 @@ import { store } from './store';
 import App from './App';
 import { loadWeather } from './actions';
 
-const aCities = ["London", "Bogota", "Cali", "Barcelona"];
+const aCities = ["London", "Bogota", "Cali"];
 
 aCities.forEach(city => {
     store.dispatch(loadWeather(city))

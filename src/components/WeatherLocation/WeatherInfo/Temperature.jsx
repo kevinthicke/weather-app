@@ -26,7 +26,6 @@ const temperatureLoadingStyle = {
 
 const Temperature = ({ temperature, weatherId }) => {
     const iconId = getWeatherKeyword(weatherId);
-
     const renderTemperature = () => (
         <div style={temperatureStyle}>
             <span className={weatherIconStyle}> 
