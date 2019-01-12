@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import reducer from '../reducer';
 
 const initialState = {
-    data: [],
+    currentWeather: [],
     forecast: []
 }
 

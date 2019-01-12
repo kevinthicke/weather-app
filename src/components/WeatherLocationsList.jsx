@@ -11,7 +11,7 @@ const WeatherLocationsList = ({ aWeatherLocationProps, handleSelectedLocation })
 };
 
 const mapStateToProps = state => ({
-    aWeatherLocationProps: state.data
+    aWeatherLocationProps: state.currentWeather
 })
 
 const mapDispatchToProps = dispatch => ({

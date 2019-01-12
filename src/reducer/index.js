@@ -5,7 +5,7 @@ export default function reducer (state, action) {
         case LOAD_WEATHER: 
             return ({
                 ...state,
-                data: state.data.concat(action.data)
+                currentWeather: state.currentWeather.concat(action.currentWeather)
             });
         case LOAD_EXTENDED_FORECAST:
             return({
