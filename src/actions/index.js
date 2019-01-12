@@ -5,7 +5,7 @@ import { LOAD_WEATHER, LOAD_EXTENDED_FORECAST } from './types';
 Note: The function loadWeather returns a function. Redux don't know how to handle it natively. 
 Most popular middleware that will let us return a function from your action creators is a 
 'redux-thunk'.
-*/
+
 const loadWeather = city => dispatch => getWeather(city).then(limitedData => {
         dispatch({ 
             type: LOAD_WEATHER, 
@@ -15,7 +15,8 @@ const loadWeather = city => dispatch => getWeather(city).then(limitedData => {
         })
 });
 
-/* for dev 
+*/ 
+/* for dev */
 
 const currentWeather = {
         city: "London",
@@ -33,7 +34,6 @@ const loadWeather = dummyparameter => dispatch => {
             currentWeather
         })
 }
-*/
 
 const loadExtendedForecast = city => dispatch => getForecast(city).then(
     forecast => dispatch({

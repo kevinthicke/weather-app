@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import WeatherLocation from './WeatherLocation';
 import { loadExtendedForecast } from '../actions';
 
-const WeatherLocationsList = ({ aWeatherLocationProps, handleSelectedLocation }) => {
-    return aWeatherLocationProps.map(
+const WeatherLocationsList = ({ aCurrentWeather, handleSelectedLocation }) => {
+    return aCurrentWeather.map(
                 (data,index) => <WeatherLocation key={index} 
-                                                 forecast={data}
+                                                 data={data}
                                                  onSelectedLocation={(city) => handleSelectedLocation(city)}/>) 
 };
 
 const mapStateToProps = state => ({
-    aWeatherLocationProps: state.currentWeather
+    aCurrentWeather: state.currentWeather
 })
 
 const mapDispatchToProps = dispatch => ({
